@@ -30,8 +30,36 @@
 -->
 <script>
   "use strict";
+  let a = +prompt('Введите первое число');
+  let b = +prompt('Введите второе число');
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  
+  function getSum(){
+    return (a + b) 
+  };
+  
+  function getSubtract(){
+    if (a > b) {
+      return (a - b)
+    } else if (b > a) {
+      return (b-a)
+    } else if (a === b) {
+      return 0 
+    }
+  };
+  
+  function getMultiply(){
+  return (a*b) 
+  };
+  
+  function getDevide (){
+  return (a/b) 
+  };
+
+  console.log(getSum (a, b));
+  console.log(getSubtract (a, b));
+  console.log(getMultiply (a, b));
+  console.log(getDevide (a, b));
 </script>
 </body>
 </html>
