@@ -32,7 +32,41 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+function getSum(a,b){
+  return (a + b) 
+  };
+  
+  function getSubtract(a,b){
+    if (a > b) {
+      return (a - b)
+    } else if (b > a) {
+      return (b-a)
+    } else if (a === b) {
+      return 0 
+    }
+  };
+  function getMultiply(a,b){
+  return (a*b) 
+  };
+  function getDevide(a,b){
+  return (a/b) 
+  };
+
+
+  function mathOperation(a, b, operator) {
+    if (operator === '+') {
+      return getSum (a,b)
+    } else if (operator === '-') {
+      return getSubtract(a,b)
+    } else if (operator === '*') {
+      return getMultiply (a,b)
+    } else if (operator === '/') {
+      return getDevide (a,b)
+    }
+  }
+  
+  console.log(mathOperation (2,3,'-'));
+
 </script>
 </body>
 </html>
