@@ -44,7 +44,13 @@
     },
   ];
 
-
+  const filteredProducts = products.filter(function (item) {
+    if (item.photos && item.photos.length > 0)
+    return true;
+    else  
+    return false;
+  });
+  console.log(filteredProducts);
 
 
 
