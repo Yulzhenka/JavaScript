@@ -22,10 +22,10 @@ for(…){/* здесь пусто */}
   "use strict";
   function enterNum(i){
     console.log(i)
-    return i + 1
+    return i < 9
     } 
 
-  for(let i=0; i < 10; i = enterNum(i)) {}
+  for(let i=0; enterNum(i); i = i+1) {}
 
 </script>
 </body>
