@@ -30,36 +30,36 @@
 -->
 <script>
   "use strict";
-  let a = +prompt('Введите первое число');
-  let b = +prompt('Введите второе число');
+  const a = +prompt('Введите первое число');
+  const b = +prompt('Введите второе число');
 
   
-  function getSum(){
-    return (a + b) 
-  };
+  function getSum(a, b){
+    return a + b
+  }
   
-  function getSubtract(){
+  function getSubtract(a, b){
     if (a > b) {
-      return (a - b)
+      return a - b
     } else if (b > a) {
-      return (b-a)
+      return b-a
     } else if (a === b) {
       return 0 
     }
-  };
+  }
   
-  function getMultiply(){
-  return (a*b) 
-  };
+  function getMultiply(a, b){
+    return a * b 
+  }
   
-  function getDevide (){
-  return (a/b) 
-  };
+  function getDevide (a, b){
+    return a / b
+  }
 
-  console.log(getSum (a, b));
-  console.log(getSubtract (a, b));
-  console.log(getMultiply (a, b));
-  console.log(getDevide (a, b));
+  console.log(getSum(a, b));
+  console.log(getSubtract(a, b));
+  console.log(getMultiply(a, b));
+  console.log(getDevide(a, b));
 </script>
 </body>
 </html>
