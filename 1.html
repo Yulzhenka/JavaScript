@@ -2,29 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Homework</title>
+  <title>Homework1</title>
 </head>
 <body>
 <!--
 Обязательное задание.
 
-Необходимо пользователя попросить ввести температуру в градусах Цельсия,
-преобразовать введенное пользователем значение в соответствующую температуру
-в градусах по Фаренгейту и вывести в alert сообщение с текстом:
-"Цельсий: {C}, Фаренгейт: {F}"
-Где вместо {C} и {F} должны быть подставлены соответствующие значения, которые
-были получены ранее.
-Формула перевода градусов Цельсия в градусы Фаренгейта:
-градусы Фаренгейта = (9 / 5) * градусы Цельсия + 32
-
-Уточнение: пользователь всегда вводит корректное число.
+Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
+стирать, код с решением задачи пишем под комментарием.
 -->
+
+<a href="#" class="card-link">Card link</a>
+<a href="#" class="card-link">Another link</a>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title" data-number="100">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text" data-number="50">
+      Some quick example text to build on the card title and make up the bulk of the card's
+      content.
+    </p>
+    <a href="#" id="super_link" class="card-link">Card link</a>
+    <a href="#" class="card-link" data-number="50">Another link</a>
+  </div>
+</div>
+
 <script>
   "use strict";
-    
-    let tempC = prompt('Введите температуру в градусах Цельсия');
-    alert('Цельсий: ' + tempC + ' °' + ', Фаренгейт: ' + Math.trunc((9/5)*tempC + 32) + ' °');
-      
+
+  /*
+  1. Найти по id, используя getElementById, элемент с id равным "super_link" и
+  вывести этот элемент в консоль.
+   */
+  const testIdEl = document.getElementById('super_link');
+  console.dir(testIdEl)
+  /*
+  2. Внутри всех элементов на странице, которые имеют класс "card-link",
+  поменяйте текст внутри элемента на "ссылка".
+   */
+  const ClassCL = document.querySelectorAll('.card-link');
+  console.log(ClassCL);
+  for (let i=0; i < ClassCL.length; i++) {
+    console.log(ClassCL[i]);
+    ClassCL[i].innerHTML = 'ссылка'
+    } 
+  /*
+  3. Найти все элементы на странице с классом "card-link", которые лежат в
+  элементе с классом "card-body" и вывести полученную коллекцию в консоль.
+   */
+  const testClEls_1 = document.querySelectorAll('.card-body .card-link');
+  console.dir(testClEls_1);
+  
+  /*
+  4. Найти первый попавшийся элемент на странице у которого есть атрибут
+  data-number со значением 50 и вывести его в консоль.
+   */
+
+    const testClElsAtr = document.querySelectorAll('[data-number="50"]');
+    console.dir(testClElsAtr);
+
+  /*
+  5. Выведите содержимое тега title в консоль.
+   */
+    console.log(document.title);
+
+  /*
+  6. Получите элемент с классом "card-title" и выведите его родительский узел
+  в консоль.
+   */
+    const cardTitleClassEl = document.querySelector('.card-title');
+    console.dir(cardTitleClassEl.parentNode);
+
+  /*
+  7. Создайте тег `p`, запишите внутри него текст "Привет" и добавьте созданный
+  тег в начало элемента, который имеет класс "card".
+   */
+    const cardClass = document.querySelector('.card');
+    console.log(cardClass);
+    const newTagP = document.createElement('p');
+    newTagP.innerHTML = 'Привет'
+    cardClass.insertAdjacentElement('afterbegin', newTagP);// 1
+    cardClass.insertAdjacentHTML('afterbegin', '<p>Привет</p>');//2
+  /*
+  8. Удалите тег h6 на странице.
+   */
+    const tagH6 = document.querySelector('h6');
+    console.log(tagH6);
+    tagH6.remove();
+
 </script>
 </body>
 </html>
